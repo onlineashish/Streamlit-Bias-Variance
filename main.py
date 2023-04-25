@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.model_selection import train_test_split
 from mlxtend.evaluate import bias_variance_decomp
-from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -58,7 +57,6 @@ st.pyplot(fig)
 plt.scatter(X_train, y_train, label='Trained values')
 plt.scatter(X_test, y_test, label='True values')
 plt.scatter(X_test, y_pred, label='Predicted Values')
-# plt.plot(X_test, y_pred, label=f'K={k}')
 
 
 plt.xlabel('House Area')

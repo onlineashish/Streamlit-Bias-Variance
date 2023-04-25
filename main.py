@@ -7,15 +7,22 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 np.random.seed(42)
+#default dataset
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [1,4,9,16,25,36,49,64,81,100]
+
+option = st.selectbox('Select Dataset', ('Simple', 'Complex'))
 
 # Generate toy data
-# x = np.random.rand(100) * 20
-# y = 50 * x + x**2 + np.random.randn(100) * 100
+if(option == 'Complex'):
+    x = np.random.rand(100) * 20
+    y = 50 * x + x**2 + np.random.randn(100) * 100
 
 # x = np.arange(1,51)
 # y = x**2+3
-x = [1,2,3,4,5,6,7,8,9,10]
-y = [1,4,9,16,25,36,49,64,81,100]
+if(option == 'Simple'):
+    x = [1,2,3,4,5,6,7,8,9,10]
+    y = [1,4,9,16,25,36,49,64,81,100]
 
 # Create DataFrame
 df = pd.DataFrame({'x': x, 'y': y})

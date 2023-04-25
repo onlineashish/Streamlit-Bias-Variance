@@ -1,0 +1,6 @@
+mlxtend
+numpy
+sklearn
+matplotlib
+streamlit
+scikit-learn
